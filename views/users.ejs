@@ -1,0 +1,52 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/users.css">
+</head>
+
+<body>
+<div class="username">
+    <%= user.displayName %>
+</div>
+
+<div class="media-container">
+    <div>
+        <a href="/auth/google" class="<% if(user.google){ %>google<% } else{ %>grey<% } %>">
+            <i class="fab fa-google-plus-square"></i>
+        </a>
+        <div class="media-container">
+            <% if(user.google){ %>
+            <img class="profile-image" src="<%= user.google.image %>" class="logo"
+                 onerror="this.src='/images/user-fallback.png'" alt="User Image">
+            <% } %>
+        </div>
+    </div>
+
+    <div>
+        <a href="/auth/twitter" class="<% if(user.twitter){ %>twitter<% } else{ %>grey<% } %>">
+            <i class="fab fa-twitter-square"></i>
+        </a>
+        <div class="media-container">
+            <% if(user.twitter){ %>
+            <img class="profile-image" src="<%= user.twitter.image %>" class="logo"
+                 onerror="this.src='/images/user-fallback.png'" alt="User Image">
+            <% } %>
+        </div>
+    </div>
+
+    <div>
+        <a href="/auth/facebook" class="<% if(user.facebook){ %>facebook<% } else{ %>grey<% } %>">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <div class="media-container">
+            <% if(user.facebook){ %>
+            <img class="profile-image" src="<%= user.facebook.image %>" class="logo"
+                 onerror="this.src='/images/user-fallback.png'" alt="User Image">
+            <% } %>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

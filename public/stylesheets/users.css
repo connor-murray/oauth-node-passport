@@ -1,0 +1,47 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+a {
+    font-size: 10rem;
+}
+
+.username {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.logo {
+    height: 10rem;
+}
+
+.media-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.profile-image {
+    height: 6rem;
+}
+
+.google {
+    color: #dd4b39;
+}
+
+.facebook {
+    color: #3b5998;
+}
+
+.twitter {
+    color: #1dcaff;
+}
+
+.grey {
+    color: #A9A9A9;
+}
